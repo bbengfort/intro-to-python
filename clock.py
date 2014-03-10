@@ -22,8 +22,14 @@ import sys
 from datetime import datetime
 from dateutil.tz import tzlocal
 
+##########################################################################
+## A Clock Printer Object
+##########################################################################
+
 class Clock(object):
 
+    # The "default" formats. Add more formats via subclasses or in the
+    # instantation of a Clock object (or just add more here).
     FORMATS = {
         "code":"%a %b %d %H:%M:%S %Y %z",
         "json":"%Y-%m-%dT%H:%M:%S.%fZ",
@@ -99,6 +105,9 @@ class Clock(object):
     def json_stamp(self):
         return self._utc_format(self.formats['json'])
 
+##########################################################################
+## Main Method, handle inputs to program from command line
+##########################################################################
 
 if __name__ == "__main__":
 
