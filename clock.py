@@ -72,9 +72,9 @@ class Clock(object):
     def print_stamp(self, name):
             stamp = self.get_stamp(name)
             if stamp:
-                print stamp
+                print(stamp)
             else:
-                print "No stamp format for name %s" % name
+                print("No stamp format for name %s" % name)
 
     def help_stamp(self):
 
